@@ -33,7 +33,7 @@ mongoose.connection.on("error", err => {
   console.error("Error connecting to mongo", err)
 })
 
-app.get("/", requireAuth, (req, res) => {
+app.get("/", (req, res) => {
   res.send(`Your email is ${req.user.email}`)
 })
 
